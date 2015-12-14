@@ -29,7 +29,7 @@ with open(origin, "rb") as full:
             prod2 = pattern.group()
             origLessProd = [prod for prod in originalText if not patternComp.search(prod)]
             #originalText.insert(0,prod)
-            origLessProd.insert(0,prod2)
+            origLessProd.insert(0,prod2) #prod2 was necessary... trying to reuse prod didn't work.
             writer.writerow(origLessProd)
             print(origLessProd)
         else:
